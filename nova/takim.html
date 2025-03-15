@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Montserrat:wght@400;600;700&display=swap">
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      min-height: 100vh;
+      background-color: black;
+      color: white;
+    }
+    #myVideo {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover; 
+      z-index: -1; 
+    }
+    h1 {
+      text-align: center;
+      margin-top: 20px;
+      font-family: 'Dancing Script', sans-serif;
+      font-size: 300%;
+    }
+
+    form {
+      font-family: 'Montserrat', sans-serif; 
+      font-size:  200%;
+    }
+
+    form label {
+      font-family: 'Montserrat', sans-serif;
+    }
+
+    form input {
+      font-size: 16px;
+      padding: 10px; 
+      margin-bottom: 10px;
+      width: 100%; 
+    }
+
+    form input[type="datetime-local"] {
+      font-size: 16px; 
+      padding: 10px;
+      height: 40px;
+      margin-bottom: 10px;
+      width: 100%;
+    }
+
+
+    .button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #333; 
+      color: white; 
+      text-decoration: none;
+      border-radius: 0px; 
+      font-family: 'Montserrat', sans-serif;
+      margin-top: 20px;
+      transition: background-color 0.3s ease;
+    }
+
+    .button:hover {
+      background-color: #7882ea; 
+    }
+
+
+    .button {
+      margin-bottom: 20px;
+      align-content: center;
+    }
+    ::placeholder {
+    font-family: "Montserrat", sans-serif;
+    font-size: 14px;
+    color: #000000; 
+    font-style: italic; 
+  }
+</style>
+</head>
+<body>
+<h1>Rezervo nje takim</h1>
+
+<video autoplay muted loop id="myVideo">
+    <source src="Untitled video - Made with Clipchamp.mp4" type="video/mp4">
+  </video>
+
+
+
+<form action="index.html">
+  <label for="fname">Emri:</label><br>
+  <input type="text" id="fname" name="fname" maxlength="10" value=""><br>
+  <label for="lname">Mbiemri:</label><br>
+  <input type="text" id="lname" name="lname" maxlength="10" value=""><br>
+  <label for="text">Numri i telefonit:</label><br>
+  <input type="text" id="nrtel" name="nrtel" maxlength="10" value=""><br>
+  <label for="dttak">Data e rezevimit:</label><br>
+  <input type="datetime-local" id="dttak" name="dttak" value=""><br><br>
+
+<a href="index.html" class="button">Dergo</a>
+
+<script>
+  document.getElementById("fname").placeholder = "Vendos emrin";
+  document.getElementById("lname").placeholder = "Vendos mbiemrin";
+  document.getElementById("nrtel").placeholder = "Vendos numrin e telefonit";
+  document.getElementById("dttak").placeholder = "Vendos daten e rezevimit";
+</script>
+</form> 
+
+</body>
+</html>
